@@ -11,6 +11,6 @@ function loadSection(currentSection) {
     console.log("Loading " + currentSection + " section...")
 }
 
-loadSection("Notes")
-loadSection("Poetry")
-loadSection("Articles")
+const sections = ["Notes", "Articles", "Literature" , "Poetry", "journal" ]
+
+sections.forEach(loadSection)
