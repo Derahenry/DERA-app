@@ -15,16 +15,32 @@ const sections = ["Notes", "Articles", "Literature" , "Poetry", "journal" ]
 
 sections.forEach(loadSection)
 
-const notes = {
+const notes =[ {
     title: "my first note",
     content : "writing the most rando stuff on here ",
     section: "Notes",
     tone : "casual",
     wordCount: 10
-}
+},
+{
+    title: "my second note",
+    content : "writing the most rando stuff on here ",
+    section: "Poetry",
+    tone: "poetry",
+    wordCount: 45},
 
-console.log(notes.title)
-console.log(notes.content)
-console.log(notes.section)
-console.log(notes.tone)
-console.log(notes.wordCount)
+
+{
+    title: "my third note",
+    content : "writing the most random stuff on here ",
+    section: "Journal",
+    tone: "casual",
+    wordCount: 45}
+
+]
+
+
+
+notes.forEach(function(note) {
+    console.log(note.title + " -" + note.section )
+})
