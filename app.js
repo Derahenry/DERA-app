@@ -3,6 +3,8 @@ const myName = "Chidera"
 let currentSection = "Notes"
 
 
+
+
 console.log(appName)
 console.log(myName)
 console.log(currentSection)
@@ -38,9 +40,23 @@ const notes =[ {
     wordCount: 45}
 
 ]
-
-
-
 notes.forEach(function(note) {
     console.log(note.title + " -" + note.section )
+})
+
+
+const noteInput = document.getElementById("noteInput")
+const addBtn = document.getElementById("addBtn")
+const noteList = document.getElementById("noteList")
+
+addBtn.addEventListener("click", function() {
+    const noteText = noteInput.value
+
+    if (noteText === "") {
+        console.log("Please write something first!")
+        return
+    }
+
+    noteList.innerHTML += "<p>" + noteText + "</p>"
+    noteInput.value = ""
 })
